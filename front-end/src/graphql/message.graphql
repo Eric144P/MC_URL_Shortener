@@ -1,0 +1,15 @@
+query getMessages {
+  messages {
+    id
+    longurl
+    shorturl
+  }
+}
+
+mutation addMessage($longurl: String!, $shorturl: String!) {
+  message(longurl: $longurl, shorturl: $shorturl) {
+    id
+    longurl
+    shorturl
+  }
+}

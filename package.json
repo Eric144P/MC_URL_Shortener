@@ -1,0 +1,23 @@
+{
+  "name": "mc-url-shortener",
+  "version": "1.0.0",
+  "author": "Ju <julien.delaigues@icloud.com>",
+  "scripts": {
+    "postinstall": "(cd front-end && yarn) && (cd back-end && yarn)",
+    "dev": "docker-compose up",
+    "stop": "docker-compose down",
+    "rebuild": "docker-compose down && docker volume rm mc-url-shortener_back-end-node_modules mc-url-shortener_front-end-node_modules && docker-compose up -d --build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "i": "^0.3.7",
+    "is-uri": "^1.2.4",
+    "isuri": "^2.0.3",
+    "nanoid": "^3.3.2",
+    "react-copy-to-clipboard": "^5.0.4"
+  },
+  "devDependencies": {
+    "@types/is-uri": "^1.0.0"
+  }
+}
